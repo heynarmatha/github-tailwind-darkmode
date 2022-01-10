@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="/images/logo-image.jfif" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-white dark:bg-gray-800 dark:text-gray-100">
+  <div class="title text-center p-5 md:my-3 text-black-800 lg:py-10">
+    <div class="darkmode flex justify-center items-center space-x-2">
+      <span class="text-black-800 font-bold text-[20px]">Tailwind DarkMode</span>
+      <div>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle">
+          <div class="flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1 w-9 h-5">
+            <div class="toggleSwitch bg-white rounded-full w-4 h-4 shadow-md transform duration-400 ease-in-out"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="flex items-center h-[70vh] text-black-500 ">
+    <div class="container mx-auto p-2">
+      <div class="lg:w-[40%] container mx-auto px-5 py-5 bg-gray-300 rounded-lg lg:py-10 lg:px-6">
+        <div class="text-gray-700 md:flex md:items-center mx-auto">
+          <div class="mb-1 md:mb-0 md:w-1/2 text-gray-800 lg:w-1/2">
+            <label for="forms-labelLeftInputCode" class="font-bold text-[20px] text-gray-700 b"  for="username">User Name</label>
+          </div>
+          <div class="md:w-2/3 md:flex-grow lg:w-1/2">
+            <input class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg
+             focus:shadow-outline shadow-md  focus:placeholder-gray-500 focus:bg-white
+              focus:border-gray-600 focus:outline-none"  type="text" placeholder="User Name"
+              id="forms-labelLeftInputCode"/>
+          </div>
+        </div>
+        <div class="text-gray-700 md:flex md:items-center mt-9 mx-auto">
+          <div class="mb-1 md:mb-0 md:w-1/2 lg:w-1/2">
+            <label for="forms-labelLeftInputCode" class="font-bold text-[20px]"  for="password">Password</label>
+          </div>
+          <div class="md:w-2/3 md:flex-grow lg:w-1/2">
+            <input class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg
+             focus:shadow-outline shadow-md  focus:placeholder-gray-500 focus:bg-white
+              focus:border-gray-600 focus:outline-none" id="password" type="password" placeholder="******************"
+              id="forms-labelLeftInputCode"/>
+          </div>
+        </div>
+        <div class="text-gray-700 md:flex md:items-center mt-9 mx-auto">
+          <div class="mb-1 md:mb-0 md:w-1/2 lg:w-1/2">
+            <label for="forms-labelLeftInputCode" class="font-bold text-[20px]"  for="email">Email</label>
+          </div>
+          <div class="md:w-2/3 md:flex-grow lg:w-1/2">
+            <input class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg
+             focus:shadow-outline shadow-md  focus:placeholder-gray-500 focus:bg-white
+              focus:border-gray-600 focus:outline-none" id="email" type="email" placeholder="Enter Your Email"
+              id="forms-labelLeftInputCode"/>
+          </div>
+        </div>
+        <div class="md:flex items-start mt-9">
+          <label class=" block text-gray-800 font-bold">
+            <input class="mr-2 leading-tight" type="checkbox">
+            <span class="text-[18px]">
+              Send me your newsletter!
+            </span>
+          </label>
+        </div>
+        <div class="flex items-center justify-around mt-9">
+          <button class="bg-gray-500 hover:bg-gray-800 text-white text-[18px] font-bold py-2 px-5 lg:px-10 rounded focus:outline-none focus:shadow-outline" type="button">
+            Sign In
+          </button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const checkbox = document.querySelector("#toggle");
+    const html = document.querySelector("html");
+    const darkMode = () =>{
+      checkbox.checked
+      ? html.classList.add("dark")
+      : html.classList.remove("dark")
+    }
+    darkMode();
+    checkbox.addEventListener("click", darkMode);
+  </script>
+</body>
+
+</html>

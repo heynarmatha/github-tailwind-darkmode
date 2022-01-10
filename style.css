@@ -1,0 +1,8 @@
+@tailwind base;
+
+#toggle:checked ~ label div.toggleSwitch{
+    @apply translate-x-3;
+}
+
+@tailwind components;
+@tailwind utilities;
